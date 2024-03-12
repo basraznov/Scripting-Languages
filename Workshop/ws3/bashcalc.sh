@@ -16,7 +16,7 @@ else
         s=`echo "($2-$3)" | bc -l`
         m=`echo "($2*$3)" | bc -l`
         d=`echo "($2/$3)" | bc -l`
-	e=`echo "($2^$3)" | bc -l`
+	e=`echo 'scale=2;'"$2 \^ $3" | bc -l`
 	#e=$(echo $1 $2 | awk '{printf "%.2f", $1**$2}')
 	#printing setected calculation result 
 	case $1 in
